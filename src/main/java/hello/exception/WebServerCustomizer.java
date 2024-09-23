@@ -11,7 +11,7 @@ public class WebServerCustomizer implements WebServerFactoryCustomizer<Configura
 
     @Override
     public void customize(ConfigurableServletWebServerFactory factory) {
-        ErrorPage errorPage404 = new ErrorPage(HttpStatus.NOT_FOUND, "/error-page/400");
+        ErrorPage errorPage404 = new ErrorPage(HttpStatus.NOT_FOUND, "/error-page/404");
         ErrorPage errorPage500 = new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR, "/error-page/500");
         // RuntimeException의 자식 Exception도 전부 포함한다.
         ErrorPage errorPageEx = new ErrorPage(RuntimeException.class, "/error-page/500");
